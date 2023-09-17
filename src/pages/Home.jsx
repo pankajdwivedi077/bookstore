@@ -13,8 +13,8 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios
-      .get('https://bookstore-api-t808.onrender.com')
+    axios 
+      .get('https://bookstore-api-t808.onrender.com/books')
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
