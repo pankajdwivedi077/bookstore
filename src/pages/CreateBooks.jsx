@@ -21,7 +21,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post('https://bookstore-api-t808.onrender.com', data)
+      .post('https://bookstore-api-t808.onrender.com/books', data) // Updated URL
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
@@ -29,7 +29,6 @@ const CreateBooks = () => {
       })
       .catch((error) => {
         setLoading(false);
-        // alert('An error happened. Please Chack console');
         enqueueSnackbar('Error', { variant: 'error' });
         console.log(error);
       });
@@ -76,4 +75,4 @@ const CreateBooks = () => {
   );
 }
 
-export default CreateBooks
+export default CreateBooks;
